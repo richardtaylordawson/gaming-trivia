@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="Lifetime stats of your past Gaming Trivia quizzes you have taken.">
+    <meta name="keywords" content="gaming, trivia, trivia game, nes, stats">
+    <meta name="author" content="Richard Taylor Dawson">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social OG Tags -->
+    <meta property="og:title" content="Gaming Trivia Stats - Richard Taylor Dawson" />
+    <meta property="og:site_name" content="Gaming Trivia Stats - Richard Taylor Dawson" />
+    <meta itemprop="name" content="Gaming Trivia Stats - Richard Taylor Dawson" />
+    <meta name="twitter:title" content="Gaming Trivia Stats - Richard Taylor Dawson" />
+    <meta name="twitter:text:title" content="Gaming Trivia Stats - Richard Taylor Dawson" />
+    <meta name="twitter:image:alt" content="Gaming Trivia Stats - Richard Taylor Dawson" />
+    <meta property="og:description" content="Game built to test your knowledge about anything gaming, set in a retro NES style application." />
+    <meta itemprop="description" content="Game built to test your knowledge about anything gaming, set in a retro NES style application." />
+    <meta name="twitter:description" content="Game built to test your knowledge about anything gaming, set in a retro NES style application." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gaming-trivia.richardtaylordawson.com/" />
+    <meta property="og:image" content="https://gaming-trivia.richardtaylordawson.com/images/social-share.png" />
+    <meta itemprop="image" content="https://gaming-trivia.richardtaylordawson.com/images/social-share.png" />
+    <meta name="twitter:image" content="https://gaming-trivia.richardtaylordawson.com/images/social-share.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="640" />
+    <meta property="og:image:height" content="320" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@richard_codes" />
+    <meta name="twitter:creator" content="@richard_codes" />
+
+    <title>Gaming Trivia - Stats</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#317EFB"/>
+
+    <!-- Favicon From NES.css -->
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+
+    <!-- Custom Styling -->
+    <link href="/css/stats.css" type="text/css" rel="stylesheet"/>
+
+    <!-- NES.css -->
+    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+
+    <!-- Press Start 2P Font -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1><i class="snes-jp-logo brand mr-10"></i>Gaming Trivia - Stats</h1>
+      <p>By <a href="https://github.com/richardtaylordawson" target="_blank" rel="noreferrer" tabindex="-1">richardtaylordawson</a></p>
+    </header>
+
+    <div class="row">
+      <section class="nes-container with-title mb-2 text-center first-quarter">
+        <h2 class="title">Total Questions</h2>
+        <h2 id="total-questions"></h2>
+      </section>
+
+      <section class="nes-container with-title mb-2 text-center second-quarter">
+        <h2 class="title">Total Correct</h2>
+        <h2 id="total-correct"></h2>
+      </section>
+
+      <section class="nes-container with-title mb-2 text-center third-quarter">
+        <h2 class="title">Total Incorrect</h2>
+        <h2 id="total-incorrect"></h2>
+      </section>
+
+      <section class="nes-container with-title mb-2 text-center fourth-quarter">
+        <h2 class="title">Avg. Correct</h2>
+        <h2 id="avg-correct"></h2>
+      </section>
+    </div>
+
+    <div class="row">
+      <section class="nes-container with-title mb-2 text-center first-half">
+        <h2 class="title">Last Quiz</h2>
+        <h2 id="last-quiz"></h2>
+      </section>
+
+      <section class="nes-container with-title mb-2 text-center second-half">
+        <h2 class="title">High Score</h2>
+        <h2 id="high-score"></h2>
+      </section>
+    </div>
+
+    <section class="nes-container with-title mb-2 text-center">
+      <a href="../" class="nes-btn is-primary no-text-decoration">Back to Game</a>
+    </section>
+
+    <!-- Page Specific JS -->
+    <script type="text/javascript" src="/js/stats.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142412414-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-142412414-1');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+#dialog {
+  max-width: 750px;
+  height: 600px;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 25px;
+
+  @include large-up {
+    .dialog-row {
+      display: grid;
+      grid-gap: 20px; /* matches mb-2 */
+      grid-template-columns: [col] 25% [col] 75%;
+      grid-template-rows: [row] auto;
+    }
+
+    .dialog-first-half {
+      grid-column: col / span 1;
+      grid-row: row;
+      margin: 0 auto;
+    }
+
+    .dialog-second-half {
+      grid-column: col 2 / span 1;
+      grid-row: row;
+    }
+  }
+
+  @include medium-up {
+    .dialog-row {
+      display: block;
+      width: 100%;
+    }
+
+    .dialog-first-half {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  @include small-up {
+    .dialog-row {
+      display: block;
+      width: 100%;
+    }
+
+    .dialog-first-half {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+}

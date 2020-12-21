@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="description" content="Game built to test your knowledge about anything gaming, set in a retro NES style application.">
+  <meta name="keywords" content="gaming, gaming trivia, trivia, trivia game, nes">
+  <meta name="author" content="Richard Taylor Dawson">
+  <meta name="robots" content="index, follow">
+
+  <!-- Social OG Tags -->
+  <meta property="og:title" content="Gaming Trivia - Richard Taylor Dawson" />
+  <meta property="og:site_name" content="Gaming Trivia - Richard Taylor Dawson" />
+  <meta itemprop="name" content="Gaming Trivia - Richard Taylor Dawson" />
+  <meta name="twitter:title" content="Gaming Trivia - Richard Taylor Dawson" />
+  <meta name="twitter:text:title" content="Gaming Trivia - Richard Taylor Dawson" />
+  <meta name="twitter:image:alt" content="Gaming Trivia - Richard Taylor Dawson" />
+  <meta property="og:description" content="Game built to test your knowledge about anything gaming, set in a retro NES style application." />
+  <meta itemprop="description" content="Game built to test your knowledge about anything gaming, set in a retro NES style application." />
+  <meta name="twitter:description" content="Game built to test your knowledge about anything gaming, set in a retro NES style application." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gaming-trivia.richardtaylordawson.com/" />
+  <meta property="og:image" content="https://gaming-trivia.richardtaylordawson.com/images/social-share.png" />
+  <meta itemprop="image" content="https://gaming-trivia.richardtaylordawson.com/images/social-share.png" />
+  <meta name="twitter:image" content="https://gaming-trivia.richardtaylordawson.com/images/social-share.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="640" />
+  <meta property="og:image:height" content="320" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@richard_codes" />
+  <meta name="twitter:creator" content="@richard_codes" />
+
+  <title>Gaming Trivia</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#317EFB"/>
+
+  <!-- Favicon From NES.css -->
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  <link rel="shortcut icon" sizes="196x196" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  <!-- Custom Styling -->
+  <link href="/css/gamingtrivia.css" type="text/css" rel="stylesheet"/>
+
+  <!-- NES.css -->
+  <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+
+  <!-- Press Start 2P Font -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" type="text/css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <dialog class="nes-dialog" id="dialog">
+    <form method="dialog">
+      <menu class="dialog-menu">
+        <button class="nes-btn is-error corner-button" tabindex="-1"><i class="fa fa-times-circle"></i></button>
+      </menu>
+    </form>
+    <h1 class="mt-2 mb-2 text-center">Keyboard Shortcuts</h1>
+    <div class="dialog-row mb-2">
+      <div class="dialog-first-half">
+        <button class="nes-btn" tabindex="-1">ENTER</button>
+      </div>
+      <div class="dialog-second-half">
+        <div class="lists">
+          <ul class="nes-list is-circle override">
+            <li>Starts the game if on settings screen.</li>
+            <li>Submits question for grading or displays next question during quiz.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-row mb-2">
+      <div class="dialog-first-half">
+        <button class="nes-btn" tabindex="-1">TAB</button>
+      </div>
+      <div class="dialog-second-half">
+        <div class="lists">
+          <ul class="nes-list is-circle override">
+            <li>Moves the current focused element to the next. Combine with SHIFT to go backwards.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-row mb-2">
+      <div class="dialog-first-half">
+        <button class="nes-btn arrow-key" tabindex="-1"><i class="fa fa-arrow-right"></i></button>
+        <button class="nes-btn arrow-key" tabindex="-1"><i class="fa fa-arrow-down"></i></button>
+      </div>
+      <div class="dialog-second-half">
+        <div class="lists">
+          <ul class="nes-list is-circle override">
+            <li>Moves the current option down in the element that is currently in focus.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-row mb-2">
+      <div class="dialog-first-half">
+        <button class="nes-btn arrow-key" tabindex="-1"><i class="fa fa-arrow-left"></i></button>
+        <button class="nes-btn arrow-key" tabindex="-1"><i class="fa fa-arrow-up"></i></button>
+      </div>
+      <div class="dialog-second-half">
+        <div class="lists">
+          <ul class="nes-list is-circle override">
+            <li>Moves the current option up in the element that is currently in focus.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <header>
+    <h1><i class="snes-jp-logo brand mr-10"></i>Gaming Trivia</h1>
+    <p>By <a href="https://github.com/richardtaylordawson" target="_blank" rel="noreferrer" tabindex="-1">richardtaylordawson</a></p>
+  </header>
+
+  <div id="settings-container">
+    <section class="form nes-container with-title mb-2">
+      <h2 class="title">Settings</h2>
+
+      <button type="button" class="nes-btn is-primary corner-button" id="keyboard-info" tabindex="-1"><i class="fa fa-info-circle"></i></button>
+
+      <div class="nes-field mb-2">
+        <label for="name_field">Number of questions<span class="nes-text is-error">*</span></label>
+        <label>
+          <input type="radio" class="nes-radio" name="number-of-questions" value="5" checked autofocus/>
+          <span>5</span>
+        </label>
+        <label>
+          <input type="radio" class="nes-radio" name="number-of-questions" value="10"/>
+          <span>10</span>
+        </label>
+        <label>
+          <input type="radio" class="nes-radio" name="number-of-questions" value="15"/>
+          <span>15</span>
+        </label>
+        <label>
+          <input type="radio" class="nes-radio" name="number-of-questions" value="20"/>
+          <span>20</span>
+        </label>
+        <label>
+          <input type="radio" class="nes-radio" name="number-of-questions" value="25"/>
+          <span>25</span>
+        </label>
+      </div>
+      <div class="nes-field mb-2">
+        <label for="difficulty">Difficulty<span class="nes-text is-error">*</span></label>
+        <label>
+          <input type="radio" class="nes-radio" name="difficulty" value="easy" checked/>
+          <span>Easy</span>
+        </label>
+        <label>
+          <input type="radio" class="nes-radio" name="difficulty" value="medium"/>
+          <span>Medium</span>
+        </label>
+        <label>
+          <input type="radio" class="nes-radio" name="difficulty" value="hard"/>
+          <span>Hard</span>
+        </label>
+      </div>
+    </section>
+    <button type="button" class="nes-btn is-success" id="start-quiz-button" tabindex="-1">Start Quiz</button>
+  </div>
+
+  <div id="loading-container" class="hidden">
+    <h1 class="center-screen loading">Loading now</h1>
+  </div>
+
+  <div id="quiz-container" class="hidden">
+    <h3 id="quiz-progress"></h3>
+    <h4 class="nes-text is-error hidden" id="quiz-time-ran-out">Time ran out!</h4>
+    <progress class="nes-progress is-primary align-progress mb-2" value="100" max="100" id="quiz-question-time-left-bar"></progress>
+    <div id="current-quiz-question-container">
+      <!-- Filled from gamingtrivia.js -->
+    </div>
+    <button type="button" class="nes-btn is-success" id="submit-question-button" tabindex="-1">Submit</button>
+    <button type="button" class="nes-btn is-primary hidden" id="next-question-button" tabindex="-1">Next</button>
+  </div>
+
+  <div id="summary-container" class="hidden">
+    <div class="row">
+      <section class="nes-container with-title mb-2 first-half">
+        <h2 class="title">Score</h2>
+        <h1 class="text-center" id="total-score-percentage"></h1>
+      </section>
+      <section class="nes-container with-title mb-2 second-half">
+        <h2 class="title">Difficulty</h2>
+        <h1 class="text-center" id="summary-difficulty"></h1>
+      </section>
+    </div>
+    <div class="row">
+      <section class="nes-container with-title mb-2 first-half">
+        <h2 class="title">Total Correct: <span id="total-correct"></span></h2>
+        <progress class="nes-progress is-success" value="0" max="100" id="total-correct-progress-bar"></progress>
+      </section>
+      <section class="nes-container with-title mb-2 second-half">
+        <h2 class="title">Total Incorrect: <span id="total-incorrect"></span></h2>
+        <progress class="nes-progress is-error" value="0" max="100" id="total-incorrect-progress-bar"></progress>
+      </section>
+    </div>
+    <div class="row">
+      <section class="nes-container with-title mb-2 text-center first-half" id="summary-share-container">
+        <h2 class="title">Share Score</h2>
+        <a href="#" target="_blank" rel="noreferrer" id="share-twitter"><i class="nes-icon twitter is-large"></i></a>
+        <a href="#" id="share-mail"><i class="nes-icon gmail is-large"></i></a>
+      </section>
+      <section class="nes-container with-title mb-2 text-center second-half">
+        <h2 class="title">Play Again?</h2>
+        <h4 class="text-center display-inline">
+          <button class="nes-btn square-button" id="play-again-yes">
+            <span class="hide-on-medium-up">Play Again</span>
+            <span class="hide-on-medium-down hidden">Y</span>
+          </button><h2 class="hide-on-medium-down hidden">&nbsp;to play again.</h2>
+        </h4>
+      </section>
+    </div>
+    <section class="nes-container with-title mb-2 text-center">
+      <h4><a href="stats/" class="nes-btn is-primary no-text-decoration">View All Time Stats</a></h4>
+    </section>
+  </div>
+
+  <!-- Page Specific JS -->
+  <script type="module" src="/js/gamingtrivia.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142412414-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142412414-1');
+  </script>
+</body>
+</html>

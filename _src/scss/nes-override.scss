@@ -1,0 +1,18 @@
+/* NES Override - had to get specific in order to override */
+.nes-list.is-circle.override li::before {
+  top: 4px;
+}
+
+.nes-progress.align-progress {
+  width: 99.2%;
+}
+
+.nes-container.align-answer-container {
+  width: 99.9%;
+}
+
+body .nes-container.align-question-container {
+  width: 100%;
+  margin-left: -1px;
+  margin-top: 0;
+}

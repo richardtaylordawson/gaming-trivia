@@ -1,0 +1,13 @@
+{
+  "name": "Gaming Trivia - Richard Taylor Dawson",
+  "short_name": "Gaming Trivia",
+  "start_url": "/",
+  "background-color": "#ffffff",
+  "theme_color": "#000000",
+  "display": "standalone",
+  "description": "Gaming trivia game built using a cool CSS Framework called NES.css and an open API for the trivia questions.",
+  "icons": [{
+    "src": "images/favicon.png",
+    "sizes": "192x192"
+  }]
+}

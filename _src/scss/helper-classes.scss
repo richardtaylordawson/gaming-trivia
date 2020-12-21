@@ -1,0 +1,43 @@
+/* Had to be more specific on some to override NES.css */
+body a.no-text-decoration {
+  text-decoration: none;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+body .nes-container.mb-2 {
+  margin-bottom: 20px;
+}
+
+body .mb-2 {
+  margin-bottom: 20px;
+}
+
+.hidden,
+.nes-btn.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-inline {
+  display: inline;
+}
+
+@include large-up {
+  .hide-on-medium-down {
+    display: inline;
+  }
+
+  .hide-on-medium-up {
+    display: none;
+  }
+}
