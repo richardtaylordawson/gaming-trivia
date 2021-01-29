@@ -183,3 +183,8 @@ class Stats {
 }
 
 const AllTimeStats = new Stats()
+
+// Register service worker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js")
+}
