@@ -35,7 +35,7 @@
 
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#317EFB"/>
+  <meta name="theme-color" content="#ffffff"/>
 
   <!-- Favicon From NES.css -->
   <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
@@ -53,6 +53,12 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- PWA Install Button -->
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
+  ></script>
 </head>
 <body>
   <dialog class="nes-dialog" id="dialog">
@@ -116,8 +122,11 @@
   </dialog>
 
   <header>
-    <h1><i class="snes-jp-logo brand mr-10"></i>Gaming Trivia</h1>
-    <p>By <a href="https://github.com/richardtaylordawson" target="_blank" rel="noreferrer" tabindex="-1">richardtaylordawson</a></p>
+    <div>
+      <h1><i class="snes-jp-logo brand mr-10"></i>Gaming Trivia</h1>
+      <p>By <a href="https://github.com/richardtaylordawson" target="_blank" rel="noreferrer" tabindex="-1">richardtaylordawson</a></p>
+    </div>
+    <button type="button" class="nes-btn is-success" id="install-button" tabindex="-1">Install +</button>
   </header>
 
   <div id="settings-container">

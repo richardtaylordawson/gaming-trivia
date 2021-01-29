@@ -1,13 +1,62 @@
 {
-  "name": "Gaming Trivia - Richard Taylor Dawson",
+  "name": "Gaming Trivia",
   "short_name": "Gaming Trivia",
   "start_url": "/",
-  "background-color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "display": "standalone",
+  "orientation": "any",
   "description": "Gaming trivia game built using a cool CSS Framework called NES.css and an open API for the trivia questions.",
+  "screenshots": [
+    {
+      "src":"https://gaming-trivia.richardtaylordawson.com/images/screenshots/question.png"
+    },
+    {
+      "src":"https://gaming-trivia.richardtaylordawson.com/images/screenshots/score.png"
+    },
+    {
+      "src":"https://gaming-trivia.richardtaylordawson.com/images/screenshots/stats.png"
+    }
+  ],
   "icons": [{
-    "src": "images/favicon.png",
-    "sizes": "192x192"
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-48x48.png",
+    "sizes": "48x48",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }, {
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-72x72.png",
+    "sizes": "72x72",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }, {
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-96x96.png",
+    "sizes": "96x96",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }, {
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }, {
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }, {
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-256x256.png",
+    "sizes": "256x256",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }, {
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-384x384.png",
+    "sizes": "384x384",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }, {
+    "src": "https://gaming-trivia.richardtaylordawson.com/images/favicon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any maskable"
   }]
 }
