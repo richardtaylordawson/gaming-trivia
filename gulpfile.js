@@ -22,6 +22,12 @@ gulp.task("images", () => {
 
 gulp.task("js", () => {
   gulp
+    .src("_src/sw.js")
+    .pipe(rollup({ plugins: [babel()] }, { format: "cjs" }))
+    .pipe(uglify())
+    .pipe(gulp.dest("dist/"))
+
+  gulp
     .src("_src/js/stats.js")
     .pipe(rollup({ plugins: [babel()] }, { format: "cjs" }))
     .pipe(uglify())
