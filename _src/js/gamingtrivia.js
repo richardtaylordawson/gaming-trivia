@@ -1,4 +1,5 @@
 import "./polyfill.js"
+import "./utils/install-button"
 
 /**
  * @author Richard Dawson

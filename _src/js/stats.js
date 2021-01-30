@@ -1,3 +1,5 @@
+import "./utils/install-button"
+
 /**
  * @author Richard Dawson
  * @classdesc involves all logic to calculate and display the user's all time stats
