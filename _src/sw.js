@@ -3,8 +3,10 @@ var filesToCache = [
   "/",
   "/index.html",
   "/stats/index.html",
-  "/css/index.css",
-  "/js/index.js",
+  "/css/gamingtrivia.css",
+  "/css/stats.css",
+  "/js/gamingtrivia.js",
+  "/js/stats.js",
 ]
 
 self.addEventListener("install", (e) => {
