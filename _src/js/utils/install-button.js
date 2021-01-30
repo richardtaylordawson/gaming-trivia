@@ -1,6 +1,6 @@
 const installBtn = document.getElementById("install-button")
 
-if (installBtn !== null && mobileInstallBtn !== null) {
+if (installBtn !== null) {
   installBtn.addEventListener("click", () => {
     document.querySelector("pwa-install").openPrompt()
   })
