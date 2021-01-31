@@ -45,3 +45,9 @@ body .mb-2 {
     display: none;
   }
 }
+
+@include small {
+  .hide-on-small {
+    display: none;
+  }
+}
