@@ -1,4 +1,4 @@
-@import "./mixins.scss";
+@import "./media-queries.scss";
 @import "./nes-override.scss";
 
 body {
@@ -6,9 +6,13 @@ body {
 }
 
 header {
-  @include small-up {
-    display: flex !important;
-    flex-direction: column;
+  @include small {
+    #install-button {
+      position: absolute;
+      display: block;
+      right: 32px;
+      top: 10px;
+    }
   }
 
   @include medium-up {
