@@ -5,6 +5,15 @@ body {
   padding: 0 2rem 2rem;
 }
 
+header {
+  @include medium-up {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
 pwa-install::part(openButton) {
   display: none;
 }

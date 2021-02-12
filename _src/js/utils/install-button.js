@@ -1,15 +1,22 @@
 const installBtn = document.getElementById("install-button")
+const mobileInstallBtn = document.getElementById("mobile-install-button")
 
-if (installBtn !== null) {
+if (installBtn !== null && mobileInstallBtn !== null) {
   installBtn.addEventListener("click", () => {
+    document.querySelector("pwa-install").openPrompt()
+  })
+
+  mobileInstallBtn.addEventListener("click", () => {
     document.querySelector("pwa-install").openPrompt()
   })
 
   const setShowInstallBtn = (showBtn) => {
     if (showBtn) {
       installBtn.style.display = "block"
+      mobileInstallBtn.style.display = "block"
     } else {
       installBtn.style.display = "none"
+      mobileInstallBtn.style.display = "none"
     }
   }
 
