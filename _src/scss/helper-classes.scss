@@ -36,7 +36,7 @@ body .mb-2 {
   display: inline;
 }
 
-@include large-up {
+@include medium-up {
   .hide-on-medium-down {
     display: inline;
   }
