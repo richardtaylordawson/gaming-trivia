@@ -6,15 +6,6 @@ body {
 }
 
 header {
-  @include small {
-    #install-button {
-      position: absolute;
-      display: block;
-      right: 32px;
-      top: 10px;
-    }
-  }
-
   @include medium-up {
     display: flex !important;
     justify-content: space-between;
