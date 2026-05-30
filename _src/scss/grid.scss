@@ -1,3 +1,5 @@
+@use "./media-queries.scss" as *;
+
 @include large-up {
   .row {
     display: grid;

@@ -1,3 +1,5 @@
+@use "./media-queries.scss" as *;
+
 /* Had to be more specific on some to override NES.css */
 body a.no-text-decoration {
   text-decoration: none;

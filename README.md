@@ -5,10 +5,12 @@
 ## Run Project
 
 ```shell
-# requires node v11 or earlier
-$ yarn
-$ yarn develop
+$ npm install
+$ npm run develop
 ```
+
+This project uses plain browser JavaScript with Vite for local development and
+production builds.
 
 ## Deployment
 

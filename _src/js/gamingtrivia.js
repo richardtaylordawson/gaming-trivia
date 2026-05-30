@@ -1,5 +1,6 @@
+import "../scss/gamingtrivia.scss"
 import "./polyfill.js"
-import "./utils/install-button"
+import "./utils/install-button.js"
 
 /**
  * @author Richard Dawson

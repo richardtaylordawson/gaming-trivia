@@ -1,4 +1,4 @@
-import "./utils/install-button"
+import "../scss/stats.scss"
 
 /**
  * @author Richard Dawson
