@@ -1,4 +1,4 @@
-# Gaming Trivia - ![PWA Shields](https://www.pwa-shields.com/1.0.0/series/classic/solid/purple.svg)
+# Gaming Trivia
 
 > Gaming trivia game built using a cool CSS framework called NES.css and an open API for the trivia questions. \*Please note that the NES.css framework has been built with Chrome in mind so the look and functionality differs with other browsers. For best experience, use Chrome.
 

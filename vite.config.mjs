@@ -14,7 +14,7 @@ const sourceRoot = resolve(__dirname, "_src")
 const outputRoot = resolve(__dirname, "dist")
 
 function copyStaticAssets() {
-  const files = ["manifest.json", "robots.txt", "sitemap.xml", "sw.js"]
+  const files = ["robots.txt", "sitemap.xml", "sw.js"]
 
   return {
     name: "copy-static-assets",
@@ -34,7 +34,6 @@ function preserveRootStaticLinks() {
   const restoreLinks = (file) => {
     const htmlPath = resolve(outputRoot, file)
     const html = readFileSync(htmlPath, "utf8")
-      .replaceAll("/assets/manifest.json", "/manifest.json")
       .replaceAll("/assets/favicon.png", "/images/favicon.png")
 
     writeFileSync(htmlPath, html)
@@ -45,7 +44,6 @@ function preserveRootStaticLinks() {
     closeBundle() {
       restoreLinks("index.html")
       restoreLinks("stats/index.html")
-      rmSync(resolve(outputRoot, "assets/manifest.json"), { force: true })
       rmSync(resolve(outputRoot, "assets/favicon.png"), { force: true })
     },
   }

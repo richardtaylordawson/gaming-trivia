@@ -31,10 +31,6 @@
 
   <title>Gaming Trivia</title>
 
-  <!-- PWA -->
-  <link rel="manifest" href="%BASE_URL%manifest.json">
-  <meta name="theme-color" content="#ffffff"/>
-
   <!-- Favicon From NES.css -->
   <link rel="shortcut icon" type="image/png" href="%BASE_URL%images/favicon.png">
   <link rel="shortcut icon" sizes="196x196" href="%BASE_URL%images/favicon.png">
@@ -49,11 +45,6 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- PWA Install Button -->
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
-  ></script>
 </head>
 <body>
   <dialog class="nes-dialog" id="dialog">
@@ -122,30 +113,9 @@
       <p>By <a href="https://github.com/richardtaylordawson" target="_blank" rel="noreferrer" tabindex="-1">richardtaylordawson</a></p>
     </div>
 
-    <div class="hide-on-small">
-      <button type="button" class="nes-btn is-primary mb-2" id="install-button" tabindex="-1">
-        Install +
-      </button>
-      <pwa-install
-        usecustom
-        iconpath="https://gaming-trivia.richardtaylordawson.com/images/favicon.png"
-        manifestpath="/manifest.json"
-      ></pwa-install>
-    </div>
   </header>
 
   <div id="settings-container">
-    <div class="hide-on-medium-up">
-      <button type="button" class="nes-btn is-primary mb-2" id="mobile-install-button" tabindex="-1">
-        Install +
-      </button>
-      <pwa-install
-        usecustom
-        iconpath="https://gaming-trivia.richardtaylordawson.com/images/favicon.png"
-        manifestpath="/manifest.json"
-      ></pwa-install>
-    </div>
-
     <section class="form nes-container with-title mb-2">
       <h2 class="title">Settings</h2>
 

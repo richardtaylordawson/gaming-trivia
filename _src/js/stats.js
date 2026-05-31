@@ -1,4 +1,5 @@
 import "../scss/stats.scss"
+import "./utils/remove-pwa.js"
 
 /**
  * @author Richard Dawson
@@ -185,8 +186,3 @@ class Stats {
 }
 
 const AllTimeStats = new Stats()
-
-// Register service worker
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js")
-}

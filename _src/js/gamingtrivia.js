@@ -1,6 +1,6 @@
 import "../scss/gamingtrivia.scss"
 import "./polyfill.js"
-import "./utils/install-button.js"
+import "./utils/remove-pwa.js"
 
 /**
  * @author Richard Dawson
@@ -542,8 +542,3 @@ class GamingTrivia {
 }
 
 const Game = new GamingTrivia()
-
-// Register service worker
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js")
-}
