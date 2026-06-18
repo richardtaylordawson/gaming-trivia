@@ -14,7 +14,7 @@ const sourceRoot = resolve(__dirname, "_src")
 const outputRoot = resolve(__dirname, "dist")
 
 function copyStaticAssets() {
-  const files = ["robots.txt", "sitemap.xml", "sw.js"]
+  const files = ["robots.txt", "sitemap.xml"]
 
   return {
     name: "copy-static-assets",
@@ -33,8 +33,10 @@ function copyStaticAssets() {
 function preserveRootStaticLinks() {
   const restoreLinks = (file) => {
     const htmlPath = resolve(outputRoot, file)
-    const html = readFileSync(htmlPath, "utf8")
-      .replaceAll("/assets/favicon.png", "/images/favicon.png")
+    const html = readFileSync(htmlPath, "utf8").replaceAll(
+      "/assets/favicon.png",
+      "/images/favicon.png"
+    )
 
     writeFileSync(htmlPath, html)
   }

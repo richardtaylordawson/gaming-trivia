@@ -1,6 +1,5 @@
 import "../scss/gamingtrivia.scss"
 import "./polyfill.js"
-import "./utils/remove-pwa.js"
 
 /**
  * @author Richard Dawson
@@ -502,22 +501,18 @@ class GamingTrivia {
       this.quizzes[this.currentQuiz].difficulty
     }%20difficulty%20on%20richardtaylordawson's%20Gaming%20Trivia!%0Ahttps://gaming-trivia.richardtaylordawson.com/`
 
-    this.summaryScreen[
-      "total-score-percentage"
-    ].innerText = `${correctPercentage}%`
+    this.summaryScreen["total-score-percentage"].innerText =
+      `${correctPercentage}%`
     this.summaryScreen["summary-difficulty"].innerText =
       this.quizzes[this.currentQuiz].difficulty.charAt(0).toUpperCase() +
       this.quizzes[this.currentQuiz].difficulty.slice(1)
-    this.summaryScreen["total-correct"].innerText = this.quizzes[
-      this.currentQuiz
-    ]["total-correct"].toString()
+    this.summaryScreen["total-correct"].innerText =
+      this.quizzes[this.currentQuiz]["total-correct"].toString()
     this.summaryScreen["total-correct-progress-bar"].value = correctPercentage
-    this.summaryScreen["total-incorrect"].innerText = this.quizzes[
-      this.currentQuiz
-    ]["total-incorrect"].toString()
-    this.summaryScreen[
-      "total-incorrect-progress-bar"
-    ].value = incorrectPercentage
+    this.summaryScreen["total-incorrect"].innerText =
+      this.quizzes[this.currentQuiz]["total-incorrect"].toString()
+    this.summaryScreen["total-incorrect-progress-bar"].value =
+      incorrectPercentage
     this.summaryScreen["share-twitter"].setAttribute(
       "href",
       `https://twitter.com/intent/tweet?text=${shareMessage}`

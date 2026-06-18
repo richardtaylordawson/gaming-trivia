@@ -5,16 +5,9 @@
 ## Run Project
 
 ```shell
-$ npm install
-$ npm run develop
+$ yarn install
+$ yarn develop
 ```
-
-This project uses plain browser JavaScript with Vite for local development and
-production builds.
-
-## Deployment
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/30020b9b-e03e-44f2-a662-489a69e0fd23/deploy-status)](https://app.netlify.com/sites/rtd-gaming-trivia/deploys)
 
 ## View Project
 

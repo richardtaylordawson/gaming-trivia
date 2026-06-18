@@ -1,5 +1,4 @@
 import "../scss/stats.scss"
-import "./utils/remove-pwa.js"
 
 /**
  * @author Richard Dawson
