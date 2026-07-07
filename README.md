@@ -5,7 +5,7 @@
 ## Run Project
 
 ```shell
-$ yarn install
+$ yarn
 $ yarn develop
 ```
 
